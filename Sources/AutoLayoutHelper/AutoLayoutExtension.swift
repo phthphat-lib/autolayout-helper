@@ -19,7 +19,7 @@ extension UIView {
     ) {
         guard let superview = self.superview else { return }
         self.translatesAutoresizingMaskIntoConstraints = false
-        if #available(iOS 11.0, *), inSafeArea != .full {
+        if #available(iOS 11.0, *), inSafeArea != .no {
             self.topAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.topAnchor, constant: padding.top).isActive = true
             self.leadingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.leadingAnchor, constant: padding.left).isActive = true
             self.trailingAnchor.constraint(equalTo: superview.safeAreaLayoutGuide.trailingAnchor, constant: padding.right).isActive = true
