@@ -5,6 +5,7 @@ extension UIView {
     @discardableResult
     public func anchor(_ anchors: Anchor...) -> AnchoredConstraints {
         var constraint = AnchoredConstraints()
+        self.translatesAutoresizingMaskIntoConstraints = false
         anchors.forEach { anchor in
             switch anchor {
             case .top(let _anchor, let constant):
