@@ -13,9 +13,9 @@ extension UIView {
             case .leading(let _anchor, let constant):
                 constraint.leading = self.leadingAnchor.constraint(equalTo: _anchor, constant: constant)
             case .bottom(let _anchor, let constant):
-                constraint.bottom = self.bottomAnchor.constraint(equalTo: _anchor, constant: constant)
+                constraint.bottom = self.bottomAnchor.constraint(equalTo: _anchor, constant: -constant)
             case .trailing(let _anchor, let constant):
-                constraint.trailing = self.trailingAnchor.constraint(equalTo: _anchor, constant: constant)
+                constraint.trailing = self.trailingAnchor.constraint(equalTo: _anchor, constant: -constant)
             case .centerX(let _anchor, let constant):
                 constraint.centerX = self.centerXAnchor.constraint(equalTo: _anchor, constant: constant)
             case .centerY(let _anchor, let constant):
